@@ -1,4 +1,8 @@
 # Systematic Multi‑Signal Equity Strategy
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Research%20Project-purple.svg)
+![Build](https://img.shields.io/badge/CI-GitHub%20Actions-lightgrey.svg)
 
 **Quanta Fellowship — Final Research Project**
 
