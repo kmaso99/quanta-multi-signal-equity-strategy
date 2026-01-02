@@ -1,136 +1,67 @@
-Systematic Multi‑Signal Equity Strategy
-Quanta Fellowship — Final Research Project
+# Systematic Multi‑Signal Equity Strategy
 
-Author: Kate Mason
-Length: 37 pages
-Signals: 50 engineered features
-Methodology: TRAIN → VALIDATION → LOCKED → HOLDOUT
-Overview
+**Quanta Fellowship — Final Research Project**
+**Author:** Kate Mason
+**Report length:** 37 pages
+**Signals:** 50 engineered features
+**Research protocol:** TRAIN → VALIDATION → LOCKED → HOLDOUT
 
-This project designs and validates a 50‑signal systematic equity strategy using time‑series features, cross‑sectional factors, and engineered signals. The research emphasizes clean methodology, uncertainty‑aware evaluation, and production‑minded reproducibility.
+## Overview
 
-The full report demonstrates:
+This repository contains a full research workflow for designing and validating a **50‑signal systematic equity strategy**, combining time‑series features, cross‑sectional factors, and engineered signals. The emphasis is on **clean methodology**, **uncertainty‑aware evaluation**, and **production‑minded reproducibility**.
 
-    Feature engineering across price‑based, volatility‑based, and cross‑sectional signals
+## What the report covers
 
-    A strict TRAIN → VALIDATION → LOCKED → HOLDOUT pipeline
+- Feature engineering across price-based, volatility-based, and cross-sectional signals
+- A strict TRAIN → VALIDATION → LOCKED → HOLDOUT pipeline (leakage-aware)
+- Robustness checks and stability analysis across regimes
+- Signal attribution and factor contribution decomposition
+- A reproducible, modular workflow aligned with production quant research standards
 
-    Robustness checks and stability analysis
+## Key contributions
 
-    Signal attribution and factor contribution decomposition
+### 1) 50‑Signal Factor Library
+Signals spanning momentum, mean reversion, volatility, microstructure, and cross‑sectional spreads.
 
-    A reproducible research workflow suitable for production quant environments
+### 2) Clean Backtesting Framework
+Leakage‑controlled evaluation with locked hyperparameters and blind holdout testing.
 
-Key Contributions
+### 3) Uncertainty‑Aware Modeling
+Focus on stability, calibration, and robustness rather than point estimates alone.
 
-    50‑Signal Factor Library: Engineered signals spanning momentum, mean reversion, volatility, microstructure, and cross‑sectional spreads.
+### 4) Reproducible Workflow
+Modular Python pipeline for data cleaning, feature generation, modeling, and evaluation.
 
-    Clean Backtesting Framework: Leakage‑free evaluation with locked hyperparameters and blind holdout testing.
+## Methodology summary
 
-    Uncertainty‑Aware Modeling: Emphasis on stability, calibration, and robustness across regimes.
+### Data pipeline
+- Structured raw equity data ingestion
+- Cleaning, alignment, validation, labeling
+- 50 engineered signals with documented formulas
 
-    Reproducible Workflow: Modular Python pipeline for data cleaning, feature generation, and evaluation.
+### Modeling framework
+- Regression‑based forecasting
+- Ensemble aggregation of signals
+- Bayesian calibration for uncertainty estimation
 
-Methodology Summary
+### Evaluation
+- Rolling-window backtests
+- Risk-adjusted metrics (Sharpe, Sortino, max drawdown)
+- Stability and sensitivity analysis
+- Factor attribution and contribution analysis
 
-1. Data Pipeline
+## Repository structure
 
-    Structured raw equity data
-
-    Cleaned, aligned, and validated time‑series
-
-    Engineered 50 signals with documented formulas
-
-2. Modeling Framework
-
-    Regression‑based forecasting
-
-    Ensemble methods for signal aggregation
-
-    Bayesian calibration for uncertainty estimation
-
-3. Evaluation
-
-    Rolling‑window backtests
-
-    Risk‑adjusted metrics (Sharpe, Sortino, drawdown)
-
-    Stability and sensitivity analysis
-
-    Factor attribution
-
-Repository Structure
-/data/                # Sample data or schema (no proprietary data)
-/notebooks/           # Exploratory modeling + signal development
+```text
+/data/                  # Sample data or schema (no proprietary data)
+/data/raw/              # Place raw CSV/Parquet here (not committed)
+/notebooks/             # Exploratory analysis + signal R&D
 /src/
-    data_pipeline.py
-    feature_engineering.py
-    model_training.py
-    backtesting.py
-    evaluation.py
+  data_pipeline.py
+  feature_engineering.py
+  model_training.py
+  backtesting.py
+  evaluation.py
 /report/
-    quanta_final_project.pdf
+  quanta_final_project.pdf
 README.md
-Pipeline Overview
-flowchart TD
-
-A[Raw Data] --> B[Data Pipeline<br/>Cleaning, Alignment, Labels]
-B --> C[Feature Engineering<br/>50-Signal Library]
-C --> D[Modeling Pipeline<br/>TRAIN → VALID → LOCKED]
-D --> E[Backtesting<br/>Simulation + Risk Metrics]
-E --> F[Evaluation<br/>Attribution + Stability + Calibration]
-
-Full Report
-
-📄 Download the full 37‑page PDF  
-[(https://drive.google.com/file/d/1zB8wxuE_tIqYUH_F0FdNuTWCa82Fj1Gj/view?usp=sharing)]
-
-Why This Project Matters
-
-This research demonstrates:
-
-    Empirical rigor
-
-    First‑principles modeling
-
-    Clean methodology
-
-    Production‑ready thinking
-
-    Ability to design, test, and validate signals
-
-    Comfort with uncertainty modeling
-
-Exactly the attributes required for Astera’s Quant Researcher role.
-
-How to Run This Repo
-1. Install dependencies
- 
-pip install -r requirements.txt
-
-2. Prepare the data
-
-Place your raw CSV or Parquet files in:
-
-/data/raw/
-
-3. Generate features
-   
-python -m src.data_pipeline
-python -m src.feature_engineering
-
-4. Train + validate the model
-
-python -m src.model_training
-
-5. Run backtests
-
-python -m src.backtesting
-
-6. Evaluate results
-
-python -m src.evaluation
-
-7. Explore notebooks
-
-Open the Jupyter notebooks in /notebooks/ for exploratory analysis and visualizations.
