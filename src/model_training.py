@@ -25,7 +25,7 @@ def train_model(X_train: pd.DataFrame, y_train: pd.Series):
     Returns:
         model: Fitted model object.
     """
-    pass
+    return None
 
 
 def validate_model(model, X_val: pd.DataFrame, y_val: pd.Series) -> dict:
