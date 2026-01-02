@@ -58,4 +58,3 @@ def rolling_backtest(df: pd.DataFrame, model):
         pd.DataFrame: Rolling performance metrics.
     """
     pass
-
