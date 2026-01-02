@@ -98,4 +98,3 @@ def assemble_feature_matrix(df: pd.DataFrame) -> pd.DataFrame:
         pd.DataFrame: Full feature matrix with 50 engineered signals.
     """
     pass
-
