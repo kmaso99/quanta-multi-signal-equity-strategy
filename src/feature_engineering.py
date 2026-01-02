@@ -2,7 +2,8 @@
 feature_engineering.py
 
 Constructs the 50-signal feature library used in the multi-factor model.
-Includes momentum, mean reversion, volatility, cross-sectional, and microstructure-inspired signals.
+Includes momentum, mean reversion, volatility, cross-sectional, and
+microstructure-inspired signals.
 
 Functions:
     compute_momentum_features(df)
