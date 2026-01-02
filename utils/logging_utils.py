@@ -19,4 +19,3 @@ def get_logger(name: str) -> logging.Logger:
         logging.Logger: Configured logger instance.
     """
     pass
-
