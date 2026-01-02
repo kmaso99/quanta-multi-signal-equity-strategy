@@ -3,6 +3,23 @@ line-length = 120
 target-version = ["py310"]
 skip-string-normalization = true
 
+[tool.flake8]
+max-line-length = 120
+extend-ignore = [
+    "E501",  # line length handled by black
+    "W503",  # line break before binary operator
+    "E302",  # expected 2 blank lines
+    "W391",  # blank line at end of file
+    "W293",  # blank line contains whitespace
+]
+exclude = [
+    ".git",
+    "__pycache__",
+    ".venv",
+    ".mypy_cache",
+    ".pytest_cache",
+]
+
 [tool.mypy]
 python_version = "3.10"
 ignore_missing_imports = true
@@ -11,7 +28,3 @@ warn_return_any = false
 warn_no_return = false
 disallow_untyped_defs = false
 disallow_incomplete_defs = false
-
-[tool.flake8]
-max-line-length = 120
-extend-ignore = ["E501", "W503", "E302", "W391", "W293"]
