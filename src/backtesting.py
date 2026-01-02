@@ -24,7 +24,7 @@ def run_backtest(df: pd.DataFrame, predictions):
     Returns:
         pd.Series: Strategy returns.
     """
-    pass
+    return None
 
 
 def compute_performance_metrics(returns: pd.Series) -> dict:
@@ -43,7 +43,7 @@ def compute_performance_metrics(returns: pd.Series) -> dict:
     Returns:
         dict: Performance metrics.
     """
-    pass
+    return None
 
 
 def rolling_backtest(df: pd.DataFrame, model):
