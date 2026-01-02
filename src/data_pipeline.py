@@ -22,12 +22,13 @@ def load_raw_data(path: str) -> pd.DataFrame:
     Load raw equity time-series data from disk.
 
     Parameters:
-        path: Filepath to CSV or Parquet data.
+    path: Filepath to CSV or Parquet
+        data.
 
-    Returns:
-        Raw, unprocessed dataset containing price and volume fields.
-    """
-    pass
+Returns:
+    Raw, unprocessed dataset containing price and volume fields.
+"""
+pass
 
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
@@ -35,18 +36,18 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     Clean and validate raw data.
 
     Steps:
-        - Handle missing values
-        - Enforce schema consistency
-        - Remove invalid timestamps
-        - Standardize column names
+    - Handle missing values
+    - Enforce schema consistency
+    - Remove invalid timestamps
+    - Standardize column names
 
-    Parameters:
-        df: Raw dataset.
+Parameters:
+    df: Raw dataset.
 
-    Returns:
-        Cleaned dataset ready for alignment.
-    """
-    pass
+Returns:
+    Cleaned dataset ready for alignment.
+"""
+pass
 
 
 def align_timeseries(df: pd.DataFrame) -> pd.DataFrame:
@@ -54,17 +55,17 @@ def align_timeseries(df: pd.DataFrame) -> pd.DataFrame:
     Align time-series across tickers and timestamps.
 
     Ensures:
-        - No forward-looking leakage
-        - Uniform frequency
-        - Proper indexing
+    - No forward-looking leakage
+    - Uniform frequency
+    - Proper indexing
 
-    Parameters:
-        df: Cleaned dataset.
+Parameters:
+    df: Cleaned dataset.
 
-    Returns:
-        Aligned time-series.
-    """
-    pass
+Returns:
+    Aligned time-series.
+"""
+pass
 
 
 def generate_labels(df: pd.DataFrame, horizon: int = 1) -> pd.Series:
@@ -72,10 +73,10 @@ def generate_labels(df: pd.DataFrame, horizon: int = 1) -> pd.Series:
     Generate forward returns or target variables.
 
     Parameters:
-        df: Aligned dataset.
-        horizon: Forecast horizon in days.
+    df: Aligned dataset.
+    horizon: Forecast horizon in days.
 
-    Returns:
-        Target variable for supervised learning.
-    """
-    pass
+Returns:
+    Target variable for supervised learning.
+"""
+pass
