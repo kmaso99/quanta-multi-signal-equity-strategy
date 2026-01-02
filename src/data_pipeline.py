@@ -1,7 +1,8 @@
 """
 data_pipeline.py
 
-Handles data ingestion, cleaning, alignment, and preparation for modeling.
+Handles data ingestion, cleaning, alignment, and preparation for
+modeling.
 
 Ensures reproducibility and prevents leakage by enforcing strict temporal
 ordering.
@@ -19,64 +20,53 @@ import pandas as pd
 
 def load_raw_data(path: str) -> pd.DataFrame:
     """
-    Load raw equity time-series data from disk.
+    Load raw equity data from disk.
 
     Parameters:
-    path: Filepath to CSV or Parquet
-        data.
+        path: Filepath to CSV or Parquet
+            data.
 
-Returns:
-    Raw, unprocessed dataset containing price and volume fields.
-"""
-pass
+    Returns:
+        pd.DataFrame: Raw data.
+    """
+    pass
 
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Clean and validate raw data.
+    Apply cleaning rules, handle missing values, and validate schema.
 
-    Steps:
-    - Handle missing values
-    - Enforce schema consistency
-    - Remove invalid timestamps
-    - Standardize column names
+    Parameters:
+        df (pd.DataFrame): Raw equity data.
 
-Parameters:
-    df: Raw dataset.
-
-Returns:
-    Cleaned dataset ready for alignment.
-"""
-pass
+    Returns:
+        pd.DataFrame: Cleaned data.
+    """
+    pass
 
 
 def align_timeseries(df: pd.DataFrame) -> pd.DataFrame:
     """
     Align time-series across tickers and timestamps.
 
-    Ensures:
-    - No forward-looking leakage
-    - Uniform frequency
-    - Proper indexing
+    Parameters:
+        df (pd.DataFrame): Cleaned data.
 
-Parameters:
-    df: Cleaned dataset.
-
-Returns:
-    Aligned time-series.
-"""
-pass
-
-
-def generate_labels(df: pd.DataFrame, horizon: int = 1) -> pd.Series:
+    Returns:
+        pd.DataFrame: Aligned data.
     """
-    Generate forward returns or target variables.
+    pass
+
+
+def generate_labels(df: pd.DataFrame, horizon: int = 1) -> pd.DataFrame:
+    """
+    Create forward returns or target variables.
 
     Parameters:
-    df: Aligned dataset.
-    horizon: Forecast horizon in days.
+        df (pd.DataFrame): Feature matrix.
+        horizon (int): Lookahead horizon in periods.
 
-Returns:
-    Target variable for supervised learning.
-"""
-pass
+    Returns:
+        pd.DataFrame: Data with labels.
+    """
+    pass
