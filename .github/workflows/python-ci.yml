@@ -33,6 +33,10 @@ jobs:
         pip install -r requirements.txt
         pip install black flake8 mypy pytest
 
+    - name: Install coverage tools
+      run: |
+       pip install coverage pytest
+
     - name: Run black (format check)
       run: |
         black --check .
@@ -55,7 +59,19 @@ jobs:
         import src.evaluation
         print("All modules imported successfully.")
         EOF
-
+        
+    - name: Run tests with coverage
+      run: |
+       coverage run -m pytest || true
+       coverage xml
+       coverage report
+   
     - name: Run pytest (placeholder)
       run: |
         pytest -q || true
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage.xml   
