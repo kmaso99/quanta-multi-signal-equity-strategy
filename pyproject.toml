@@ -6,11 +6,11 @@ skip-string-normalization = true
 [tool.flake8]
 max-line-length = 120
 extend-ignore = [
-    "E501",  # line length handled by black
-    "W503",  # line break before binary operator
-    "E302",  # expected 2 blank lines
-    "W391",  # blank line at end of file
-    "W293",  # blank line contains whitespace
+    "E501",
+    "W503",
+    "E302",
+    "W391",
+    "W293",
 ]
 exclude = [
     ".git",
