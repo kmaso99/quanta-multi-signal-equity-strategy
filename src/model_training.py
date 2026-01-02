@@ -40,7 +40,7 @@ def validate_model(model, X_val: pd.DataFrame, y_val: pd.Series) -> dict:
     Returns:
         dict: Validation metrics and tuned parameters.
     """
-    pass
+    return None
 
 
 def lock_model(model):
@@ -57,7 +57,7 @@ def lock_model(model):
     Returns:
         model: Locked model ready for holdout testing.
     """
-    pass
+    return None
 
 
 def predict(model, X: pd.DataFrame):
@@ -71,4 +71,4 @@ def predict(model, X: pd.DataFrame):
     Returns:
         np.ndarray: Model predictions.
     """
-    pass
+    return None
