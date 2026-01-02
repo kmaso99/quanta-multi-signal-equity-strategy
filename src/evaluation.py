@@ -39,7 +39,7 @@ def calibration_curve(y_true, y_pred) -> dict:
     Returns:
         dict: Calibration diagnostics.
     """
-    pass
+    return None
 
 
 def stability_analysis(model, X: pd.DataFrame, y: pd.Series) -> dict:
@@ -54,7 +54,7 @@ def stability_analysis(model, X: pd.DataFrame, y: pd.Series) -> dict:
     Returns:
         dict: Stability metrics.
     """
-    pass
+    return None
 
 
 def plot_results(metrics: dict):
