@@ -76,4 +76,3 @@ def generate_labels(df: pd.DataFrame, horizon: int = 1) -> pd.Series:
         pd.Series: Target variable for supervised learning.
     """
     pass
-
