@@ -25,6 +25,7 @@ def load_raw_data(path: str) -> pd.DataFrame:
         pd.DataFrame: Raw, unprocessed dataset containing price and volume fields.
     """
     pass
+    
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
