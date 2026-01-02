@@ -25,7 +25,7 @@ def attribution_analysis(df: pd.DataFrame, signals: list) -> pd.DataFrame:
     Returns:
         pd.DataFrame: Attribution results.
     """
-    pass
+    return None
 
 
 def calibration_curve(y_true, y_pred) -> dict:
