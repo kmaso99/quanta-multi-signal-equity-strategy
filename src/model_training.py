@@ -72,4 +72,3 @@ def predict(model, X: pd.DataFrame):
         np.ndarray: Model predictions.
     """
     pass
-
