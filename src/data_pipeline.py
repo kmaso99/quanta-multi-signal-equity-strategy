@@ -26,7 +26,6 @@ def load_raw_data(path: str) -> pd.DataFrame:
     """
     pass
 
-
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Clean and validate raw data.
