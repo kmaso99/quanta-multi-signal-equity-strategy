@@ -2,11 +2,14 @@
 data_pipeline.py
 
 Handles data ingestion, cleaning, alignment, and preparation for modeling.
-Ensures reproducibility and prevents leakage by enforcing strict temporal ordering.
+
+Ensures reproducibility and prevents leakage by enforcing strict temporal
+ordering.
 
 Functions:
     load_raw_data(path): Load raw equity data from disk.
-    clean_data(df): Apply cleaning rules, handle missing values, and validate schema.
+    clean_data(df): Apply cleaning rules, handle missing values, and validate
+        schema.
     align_timeseries(df): Align time-series across tickers and timestamps.
     generate_labels(df, horizon): Create forward returns or target variables.
 """
@@ -19,10 +22,10 @@ def load_raw_data(path: str) -> pd.DataFrame:
     Load raw equity time-series data from disk.
 
     Parameters:
-        path (str): Filepath to CSV or Parquet data.
+        path: Filepath to CSV or Parquet data.
 
     Returns:
-        pd.DataFrame: Raw, unprocessed dataset containing price and volume fields.
+        Raw, unprocessed dataset containing price and volume fields.
     """
     pass
 
@@ -38,10 +41,10 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
         - Standardize column names
 
     Parameters:
-        df (pd.DataFrame): Raw dataset.
+        df: Raw dataset.
 
     Returns:
-        pd.DataFrame: Cleaned dataset ready for alignment.
+        Cleaned dataset ready for alignment.
     """
     pass
 
@@ -56,10 +59,10 @@ def align_timeseries(df: pd.DataFrame) -> pd.DataFrame:
         - Proper indexing
 
     Parameters:
-        df (pd.DataFrame): Cleaned dataset.
+        df: Cleaned dataset.
 
     Returns:
-        pd.DataFrame: Aligned time-series.
+        Aligned time-series.
     """
     pass
 
@@ -69,10 +72,10 @@ def generate_labels(df: pd.DataFrame, horizon: int = 1) -> pd.Series:
     Generate forward returns or target variables.
 
     Parameters:
-        df (pd.DataFrame): Aligned dataset.
-        horizon (int): Forecast horizon in days.
+        df: Aligned dataset.
+        horizon: Forecast horizon in days.
 
     Returns:
-        pd.Series: Target variable for supervised learning.
+        Target variable for supervised learning.
     """
     pass
