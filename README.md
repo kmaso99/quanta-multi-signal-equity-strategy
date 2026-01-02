@@ -1,0 +1,1 @@
+# quanta-multi-signal-equity-strategy
