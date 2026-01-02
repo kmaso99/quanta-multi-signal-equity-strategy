@@ -32,6 +32,7 @@ Key Contributions
     Reproducible Workflow: Modular Python pipeline for data cleaning, feature generation, and evaluation.
 
 Methodology Summary
+
 1. Data Pipeline
 
     Structured raw equity data
@@ -78,10 +79,12 @@ B --> C[Feature Engineering<br/>50-Signal Library]
 C --> D[Modeling Pipeline<br/>TRAIN → VALID → LOCKED]
 D --> E[Backtesting<br/>Simulation + Risk Metrics]
 E --> F[Evaluation<br/>Attribution + Stability + Calibration]
+
 Full Report
 
 📄 Download the full 37‑page PDF  
-[[(https://drive.google.com/file/d/1zB8wxuE_tIqYUH_F0FdNuTWCa82Fj1Gj/view?usp=sharing)]
+[(https://drive.google.com/file/d/1zB8wxuE_tIqYUH_F0FdNuTWCa82Fj1Gj/view?usp=sharing)]
+
 Why This Project Matters
 
 This research demonstrates:
@@ -102,18 +105,32 @@ Exactly the attributes required for Astera’s Quant Researcher role.
 
 How to Run This Repo
 1. Install dependencies
+ 
 pip install -r requirements.txt
+
 2. Prepare the data
+
 Place your raw CSV or Parquet files in:
+
 /data/raw/
+
 3. Generate features
+   
 python -m src.data_pipeline
 python -m src.feature_engineering
+
 4. Train + validate the model
+
 python -m src.model_training
+
 5. Run backtests
+
 python -m src.backtesting
+
 6. Evaluate results
+
 python -m src.evaluation
+
 7. Explore notebooks
+
 Open the Jupyter notebooks in /notebooks/ for exploratory analysis and visualizations.
