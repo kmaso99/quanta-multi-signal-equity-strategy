@@ -20,4 +20,3 @@ def plot_series(series, title: str = ""):
         None
     """
     pass
-
